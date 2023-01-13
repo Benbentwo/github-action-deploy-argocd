@@ -116,6 +116,7 @@ runs:
         name: GitHub Actions Autocommitter
         branch: main
         files: ${{ steps.destination.outputs.filepath }}/${{ inputs.application }}.yaml
+        repository: https://github.com/cloudposse/argocd-deploy-non-prod-test
         token: ${{ inputs.github-pat }}
         force: true
         directory: .destination
