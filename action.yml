@@ -92,7 +92,7 @@ runs:
         echo "name=$(echo $RANDOM | md5sum | head -c 20)" >> $GITHUB_OUTPUT
 
     - name: Checkout Argo Configuration
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: ${{ steps.destination.outputs.owner }}/${{ steps.destination.outputs.name }}
         ref: ${{ steps.destination.outputs.ref }}
